@@ -129,7 +129,7 @@ void VncViewer::closeEvent(QCloseEvent *event)
 
 void VncViewer::start()
 {
-    cl = rfbGetClient(8, 3, 4);
+    cl = rfbGetClient(5,3,2);
     cl->format.depth = 24;
     cl->format.depth = 16;
     cl->format.bitsPerPixel = 16;
