@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package blender;
+
+service ImageService {
+    rpc ReceiveImage (Viewport) returns (ImageResponse);
+}
+
+message Viewport {
+    bytes image_data = 1;
+    int32 width = 2;
+    int32 height = 3;
+}
+
+message ImageResponse {
+    string message = 1;
+}
