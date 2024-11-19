@@ -8,6 +8,7 @@ cmake --build .
 popd 
 cp .downloads/libvncserver/build/libvncserver.so libs/
 cp .downloads/libvncserver/build/libvncclient.so libs/
-cp -r .downloads/libvncserver/build/include/rfb include
-cp -r .downloads/libvncserver/build/include/rfb include
+cp -rf .downloads/libvncserver/build/include/rfb include
+cp -rf .downloads/libvncserver/build/include/rfb include
 cp .downloads/libvncserver/include/rfb/*  include/rfb/
+rm include/rfb/rfbconfig.h.cmakein
