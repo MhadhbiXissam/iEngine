@@ -77,5 +77,9 @@ class QBlender(QWidget):
             y = (self.height() - self.image.height()) // 2
             painter.drawImage(x, y, self.image)
 
-
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    widget = QBlender()
+    widget.show()
+    sys.exit(app.exec_())
 
