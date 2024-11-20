@@ -38,8 +38,10 @@ class QBlender(QWidget):
 
     def run_server(self):
         def update_gui(image_data):
+            print(image_data)
             # Convert the raw image data to a QImage
             self.framebuffer = QImage.fromData(image_data)
+            print(self.framebuffer)
             # Scale the image to fit the widget using FastTransformation for better clarity
             self.image = self.framebuffer.scaled(
                 self.size(), Qt.IgnoreAspectRatio, Qt.FastTransformation
